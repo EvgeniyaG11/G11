@@ -6,7 +6,7 @@ def first(a):
     return a[0]
 
 
-print("Last number at list: " + str(last(a)))
+print("Last number at list: " + str(first(a)))
 
 
 def last(a):
