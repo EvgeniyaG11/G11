@@ -1,7 +1,12 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
-a = int(input("Enter numbers: "))
 
-s = datetime.fromtimestamp(a).strftime('%d %A %H:%M:%S')
+def GetTime():
+    sec = timedelta(seconds=int(input('Enter the number of seconds: ')))
+    d = datetime(1, 1, 1) + sec
 
-print("Converted numbers to seconds: " + str(s))
+    print("DAYS:HOURS:MIN:SEC")
+    print("%d:%d:%d:%d" % (d.day - 1, d.hour, d.minute, d.second))
+
+
+GetTime()
